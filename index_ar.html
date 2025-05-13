@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html  lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <title>Logistica - Shipping Company Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
+        <a href="index_ar.html" class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5">
+            <h2 class="mb-2 text-white">اللوجستية</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index_ar.html" class="nav-item nav-link active">الرئيسية</a>
+                <a href="about_ar.html" class="nav-item nav-link">من نحن</a>
+                <a href="service_ar.html" class="nav-item nav-link">خدماتنا</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">صفحات</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="price_ar.html" class="dropdown-item">خطط الأسعار</a>
+                        <a href="feature_ar.html" class="dropdown-item">الميزات</a>
+                        <a href="quote_ar.html" class="dropdown-item">طلب عرض</a>
+                        <a href="team_ar.html" class="dropdown-item">فريق العمل</a>
+                        <a href="testimonial_ar.html" class="dropdown-item">آراء العملاء</a>
+                        <a href="404_ar.html" class="dropdown-item">صفحة 404</a>
+                    </div>
+                </div>
+                <a href="contact_ar.html" class="nav-item nav-link">تواصل معنا</a>
+                
+                <!-- Language Switcher Button -->
+                <div class="nav-item ms-3">
+                    <a id="languageSwitcher" href="#" class="btn btn-outline-primary btn-sm py-1 px-3">
+                        <span class="d-none d-md-inline">English</span>
+                        <span class="d-md-none">EN</span>
+                    </a>
+                </div>
+            </div>
+            <h4 class="m-0 pe-lg-5 d-none d-lg-block">
+                <i class="fa fa-headphones text-primary me-3"></i>+963932100700
+            </h4>
+        </div>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSwitcher = document.getElementById('languageSwitcher');
+            
+            languageSwitcher.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Get current page URL
+                const currentPage = window.location.pathname;
+                
+                // Check if we're on an Arabic page
+                if(currentPage.includes('_ar.html')) {
+                    // Switch to English version
+                    const englishPage = currentPage.replace('_ar.html', '_en.html');
+                    window.location.href = englishPage;
+                } else if(currentPage.includes('_en.html')) {
+                    // Switch to Arabic version
+                    const arabicPage = currentPage.replace('_en.html', '_ar.html');
+                    window.location.href = arabicPage;
+                } else {
+                    // Default to English if no language suffix found
+                    const newPage = currentPage.replace('.html', '_en.html');
+                    window.location.href = newPage;
+                }
+            });
+            
+            // Highlight current language button
+            const currentPage = window.location.pathname;
+            if(currentPage.includes('_en.html')) {
+                languageSwitcher.innerHTML = '<span class="d-none d-md-inline">العربية</span><span class="d-md-none">AR</span>';
+            }
+        });
+        </script>
+    
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5">
+        <div class="owl-carousel header-carousel position-relative mb-5">
+    
+            <!-- Slide 1: التخليص الجمركي والخدمات اللوجستية -->
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" style="max-height: 700px; object-fit: cover; width: 100%;" src="img/bg1.jpg" alt="bg1">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">شركة هبة الله التجارية </h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">شريكك المثالي في <span class="text-primary">التخليص والنقل</span></h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                                    نقدم خدمات التخليص الجمركي، تفريغ وفرز البضائع، النقل المحلي والدولي عبر الموانئ البرية والبحرية.
+                                </p>
+                                <a href="#services" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">المزيد</a>
+                                <a href="#contact" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">اطلب عرض</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Slide 2: وشركة هبة الله التجارية-->
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" style="max-height: 700px; object-fit: cover; width: 100%;" src="img/bg2.jpg" alt="bg2">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">شركة هبة الله التجارية </h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">استقبال وتفريغ <span class="text-primary">البواخر التجارية</span></h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                                    نقدم خدمات الوكالة البحرية من استقبال البواخر، تنظيم المدة الزمنية للتفريغ، والتنسيق مع الشركات الشاحنة.
+                                </p>
+                                <a href="#about" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">تعرف علينا</a>
+                                <a href="#contact" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">تواصل معنا</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid overflow-hidden py-5 px-lg-0">
+        <div class="container about py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/about1.jpg" style="object-fit: cover;" alt="Hibatullah Company">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="text-secondary text-uppercase mb-3">من نحن</h6>
+                    <h1 class="mb-5">حلول متكاملة في التخليص الجمركي والنقل اللوجستي</h1>
+                    <p class="mb-5">
+                        شركة هبة الله شركة رائدة في مجال التخليص الجمركي والخدمات اللوجستية منذ تأسيسها عام 2004. نقدم خدمات شاملة في المعاملات الجمركية، النقل البري والبحري، وتخليص البضائع عبر موانئ طرطوس واللاذقية والمنافذ البرية.
+                    </p>
+                    <div class="row g-4 mb-5">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                            <i class="fa fa-ship fa-3x text-primary mb-3"></i>
+                            <h5>الوكالة البحرية</h5>
+                            <p class="m-0">نقوم باستقبال البواخر وتفريغها عبر وكالة الناصر للأعمال البحرية التابعة لنا.</p>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                            <i class="fa fa-truck fa-3x text-primary mb-3"></i>
+                            <h5>النقل اللوجستي</h5>
+                            <p class="m-0">خدمات نقل محلية ودولية إلى لبنان، العراق، تركيا، والأردن عبر أسطول شركة الغلال.</p>
+                        </div>
+                    </div>
+                    <a href="http://hibatullah.co/" class="btn btn-primary py-3 px-5">المزيد عنا</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Fact Start -->
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3">حقائق وأرقام</h6>
+                    <h1 class="mb-5">الوجهة الأولى لإدارة شحناتك الجمركية واللوجستية</h1>
+                    <p class="mb-5">
+                        منذ تأسيسنا عام 2004، نقدم حلولاً متكاملة في التخليص الجمركي والنقل اللوجستي عبر موانئ طرطوس واللاذقية. نضمن لكم خدمة دقيقة وسريعة بأسعار تنافسية.
+                    </p>
+                    <div class="d-flex align-items-center">
+                        <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
+                        <div class="ps-4">
+                            <h6>اتصل بنا لأي استفسار!</h6>
+                            <h3 class="text-primary m-0">+963 932 100 700</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-sm-6">
+                            <div class="bg-primary p-4 mb-4 wow fadeIn" data-wow-delay="0.3s">
+                                <i class="fa fa-users fa-2x text-white mb-3"></i>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">500</h2>
+                                <p class="text-white mb-0">عميل راضٍ</p>
+                            </div>
+                            <div class="bg-secondary p-4 wow fadeIn" data-wow-delay="0.5s">
+                                <i class="fa fa-ship fa-2x text-white mb-3"></i>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">2500</h2>
+                                <p class="text-white mb-0">شحنة تم تخليصها</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="bg-success p-4 wow fadeIn" data-wow-delay="0.7s">
+                                <i class="fa fa-warehouse fa-2x text-white mb-3"></i>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">20</h2>
+                                <p class="text-white mb-0">شاحنة في الأسطول</p>
+                            </div>
+                            <div class="bg-warning p-4 mt-4 wow fadeIn" data-wow-delay="0.9s">
+                                <i class="fa fa-calendar-alt fa-2x text-white mb-3"></i>
+                                <h2 class="text-white mb-2" data-toggle="counter-up">19</h2>
+                                <p class="text-white mb-0">سنوات من الخبرة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fact End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">خدماتنا</h6>
+                <h1 class="mb-5">اكتشف خدماتنا المتكاملة</h1>
+            </div>
+            <div class="row g-4">
+                <!-- Service 1: Customs Clearance -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="height: 203px;">
+                            <img class="img-fluid w-100 h-100" src="img/s2.jpg" alt="التخليص الجمركي" style="object-fit: cover;">
+                        </div>
+                        <h4 class="mb-3">التخليص الجمركي</h4>
+                        <p>خدمات تخليص جمركي متكاملة لكافة أنواع البضائع بما في ذلك الحديد، الأسمنت، المواد العلفية، والمعدات الثقيلة.</p>
+                        <a class="btn-slide mt-2" href="/services/customs-clearance">
+                            <i class="fa fa-arrow-left"></i><span>المزيد</span>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Service 2: Marine Operations -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="height: 203px;">
+                            <img class="img-fluid w-100 h-100" src="img/service-2.jpg" alt="الخدمات البحرية" style="object-fit: cover;">
+                        </div>
+                        <h4 class="mb-3">الخدمات البحرية</h4>
+                        <p>استقبال البواخر وتفريغها عبر وكالة الناصر للأعمال البحرية مع متابعة كافة الإجراءات المرفئية.</p>
+                        <a class="btn-slide mt-2" href="/services/marine-operations">
+                            <i class="fa fa-arrow-left"></i><span>المزيد</span>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Service 3: Land Transport -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="height: 203px;">
+                            <img class="img-fluid w-100 h-100" src="img/s1.jpg" alt="النقل البري" style="object-fit: cover;">
+                        </div>
+                        <h4 class="mb-3">النقل البري</h4>
+                        <p>خدمات نقل محلية ودولية إلى دول الجوار عبر أسطول شركة الغلال المكون من 20 شاحنة.</p>
+                        <a class="btn-slide mt-2" href="/services/land-transport">
+                            <i class="fa fa-arrow-left"></i><span>المزيد</span>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Service 4: Supply Services -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="height: 203px;">
+                            <img class="img-fluid w-100 h-100" src="img/s4.jpg" alt="توريد المواد" style="object-fit: cover;">
+                        </div>
+                        <h4 class="mb-3">توريد المواد</h4>
+                        <p>توريد وتوزيع الحديد بأنواعه والأسمنت في السوق المحلية مع ضمان الجودة وأفضل الأسعار.</p>
+                        <a class="btn-slide mt-2" href="/services/supply-services">
+                            <i class="fa fa-arrow-left"></i><span>المزيد</span>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Service 5: Tender Participation -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="height: 203px;">
+                            <img class="img-fluid w-100 h-100" src="img/s5.jpg" alt="المشاركة في المناقصات" style="object-fit: cover;">
+                        </div>
+                        <h4 class="mb-3">المشاركة في المناقصات</h4>
+                        <p>تمثيل الشركات في مناقصات القطاعين العام والخاص وتقديم العطاءات التنافسية.</p>
+                        <a class="btn-slide mt-2" href="/services/tender-participation">
+                            <i class="fa fa-arrow-left"></i><span>المزيد</span>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Service 6: Logistics Solutions -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item p-4">
+                        <div class="overflow-hidden mb-4" style="height: 203px;">
+                            <img class="img-fluid w-100 h-100" src="img/s6.jpg" alt="الحلول اللوجستية" style="object-fit: cover;">
+                        </div>
+                        <h4 class="mb-3">الحلول اللوجستية</h4>
+                        <p>إدارة سلسلة التوريد الكاملة من التفريغ، الفرز، إعادة التحميل والتسليم النهائي.</p>
+                        <a class="btn-slide mt-2" href="/services/logistics-solutions">
+                            <i class="fa fa-arrow-left"></i><span>المزيد</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid overflow-hidden py-5 px-lg-0">
+        <div class="container feature py-5 px-lg-0">
+            <div class="row g-5 mx-lg-0">
+                <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3">مميزاتنا</h6>
+                    <h1 class="mb-5">شركة موثوقة في الخدمات اللوجستية منذ 2004</h1>
+                    <div class="d-flex mb-5 wow fadeInUp" data-wow-delay="0.3s">
+                        <i class="fa fa-ship text-primary fa-3x flex-shrink-0"></i>
+                        <div class="ms-4">
+                            <h5>الخدمات البحرية المتكاملة</h5>
+                            <p class="mb-0">نقدم خدمات شاملة في الموانئ السورية عبر وكالة الناصر للأعمال البحرية التابعة لنا</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-5 wow fadeIn" data-wow-delay="0.5s">
+                        <i class="fa fa-truck text-primary fa-3x flex-shrink-0"></i>
+                        <div class="ms-4">
+                            <h5>شبكة نقل واسعة</h5>
+                            <p class="mb-0">أسطول من 20 شاحنة لنقل البضائع محلياً وإلى دول الجوار (لبنان، العراق، الأردن، تركيا)</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-0 wow fadeInUp" data-wow-delay="0.7s">
+                        <i class="fa fa-file-contract text-primary fa-3x flex-shrink-0"></i>
+                        <div class="ms-4">
+                            <h5>حلول جمركية متكاملة</h5>
+                            <p class="mb-0">فريق متخصص في التخليص الجمركي لكافة أنواع البضائع مع متابعة كافة الإجراءات القانونية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0 wow fadeInRight" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/f1.jpg" style="object-fit: cover;" alt="شركة هبة الله للخدمات اللوجستية">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+
+    <!-- Pricing Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">Pricing Plan</h6>
+                <h1 class="mb-5">Perfect Pricing Plan</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="price-item">
+                        <div class="border-bottom p-4 mb-4">
+                            <h5 class="text-primary mb-1">Basic Plan</h5>
+                            <h1 class="display-5 mb-0">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>49.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                            </h1>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
+                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
+                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span >Order Now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="price-item">
+                        <div class="border-bottom p-4 mb-4">
+                            <h5 class="text-primary mb-1">Standard Plan</h5>
+                            <h1 class="display-5 mb-0">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                            </h1>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
+                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
+                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span >Order Now</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="price-item">
+                        <div class="border-bottom p-4 mb-4">
+                            <h5 class="text-primary mb-1">Advanced Plan</h5>
+                            <h1 class="display-5 mb-0">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>149.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                            </h1>
+                        </div>
+                        <div class="p-4 pt-0">
+                            <p><i class="fa fa-check text-success me-3"></i>HTML5 & CSS3</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Bootstrap v5</p>
+                            <p><i class="fa fa-check text-success me-3"></i>FontAwesome Icons</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Responsive Layout</p>
+                            <p><i class="fa fa-check text-success me-3"></i>Cross-browser Support</p>
+                            <a class="btn-slide mt-2" href=""><i class="fa fa-arrow-right"></i><span >Order Now</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Pricing End -->
+
+
+    <!-- Quote Start -->
+    <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="text-secondary text-uppercase mb-3">تواصل معنا</h6>
+                    <h1 class="mb-5">تواصل معنا!</h1>
+                    <p class="mb-5">نقدم لكم خدمات التخليص الجمركي والنقل اللوجستي بأعلى معايير الجودة. تواصل معنا للحصول على أفضل العروض والخدمات المخصصة لاحتياجات عملك.</p>
+                    <div class="d-flex align-items-center">
+                        <i class="fa fa-headphones fa-2x flex-shrink-0 bg-primary p-3 text-white"></i>
+                        <div class="ps-4">
+                            <h6>اتصل بنا للاستفسار!</h6>
+                            <h3 class="text-primary m-0">+963 932 100 700</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="bg-light text-center p-5 wow fadeIn" data-wow-delay="0.5s">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" placeholder="الاسم الكامل" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="email" class="form-control border-0" placeholder="البريد الإلكتروني" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" placeholder="رقم الهاتف" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <select class="form-select border-0" style="height: 55px;">
+                                        <option selected>اختر نوع الخدمة</option>
+                                        <option value="1">التخليص الجمركي</option>
+                                        <option value="2">الخدمات البحرية</option>
+                                        <option value="3">النقل البري</option>
+                                        <option value="4">توريد المواد</option>
+                                        <option value="5">خدمات لوجستية أخرى</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control border-0" placeholder="ملاحظات إضافية"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">إرسال الطلب</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+
+    <!-- Team Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container py-5">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="text-secondary text-uppercase">Our Team</h6>
+                <h1 class="mb-5">Expert Team Members</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0">Full Name</h5>
+                        <p>Designation</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0">Full Name</h5>
+                        <p>Designation</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0">Full Name</h5>
+                        <p>Designation</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <div class="team-item p-4">
+                        <div class="overflow-hidden mb-4">
+                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                        </div>
+                        <h5 class="mb-0">Full Name</h5>
+                        <p>Designation</p>
+                        <div class="btn-slide mt-1">
+                            <i class="fa fa-share"></i>
+                            <span>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <!-- <div class="container py-5">
+            <div class="text-center">
+                <h6 class="text-secondary text-uppercase">Testimonial</h6>
+                <h1 class="mb-0">Our Clients Say!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item p-4 my-5">
+                    <i class="fa fa-quote-right fa-3x text-light position-absolute top-0 end-0 mt-n3 me-4"></i>
+                    <div class="d-flex align-items-end mb-4">
+                        <img class="img-fluid flex-shrink-0" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Client Name</h5>
+                            <p class="m-0">Profession</p>
+                        </div>
+                    </div>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">معلومات التواصل</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>سوريا - طرطوس - حي المحطة مقابل مدرسة المتفوقين</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+963 932 100 700</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>majd.jannoud@hibatullah.co</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">خدماتنا</h4>
+                    <a class="btn btn-link" href="#">التخليص الجمركي</a>
+                    <a class="btn btn-link" href="#">الخدمات البحرية</a>
+                    <a class="btn btn-link" href="#">النقل البري</a>
+                    <a class="btn btn-link" href="#">توريد المواد</a>
+                    <a class="btn btn-link" href="#">الحلول اللوجستية</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">روابط سريعة</h4>
+                    <a class="btn btn-link" href="#">عن الشركة</a>
+                    <a class="btn btn-link" href="#">اتصل بنا</a>
+                    <a class="btn btn-link" href="#">خدماتنا</a>
+                    <a class="btn btn-link" href="#">الشروط والأحكام</a>
+                    <a class="btn btn-link" href="#">الدعم الفني</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">النشرة البريدية</h4>
+                    <p>اشترك في نشرتنا البريدية لتصلك آخر عروضنا وأخبارنا</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="بريدك الإلكتروني">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">اشتراك</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
